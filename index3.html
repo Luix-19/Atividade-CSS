@@ -1,167 +1,179 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário - Já sou Aluno</title>
+  <title>Document</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #00e5ff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+                             /* parte visual de todos os botões do codigo*/
+   body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #00e5ff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .form-container {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-      max-width: 600px;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 2.5em 3em;
-    }
+          .form-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 2.5em 3em;
+        }
 
-    h2 {
-      text-align: center;
-      color: #333;
-      margin-top: 0;
-      margin-bottom: 1.5em;
-      font-size: 1.8em;
-      font-weight: 600;
-    }
 
-    .form-group {
-      margin-bottom: 1.5em;
-    }
+        h2 {
+            text-align: center;
+            color: #333; 
+            margin-top: 0;
+            margin-bottom: 1.5em;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
 
-    label {
-      display: block;
-      margin-bottom: 0.5em;
-      color: #555;
-      font-weight: 600;
-    }
+       
+        .form-group {
+            margin-bottom: 1.5em;
+        }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    select,
-    textarea,
-    input[type="date"] {
-      width: 100%;
-      padding: 0.8em 1em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-      font-size: 1em;
-      color: #333;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #555;
+            font-weight: 600;
+        }
 
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: #FF8C00;
-      box-shadow: 0 0 8px rgba(255, 140, 0, 0.25);
-      outline: none;
-    }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8em 1em;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; 
+            font-size: 1em;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type= "tel"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #FF8C00; 
+            box-shadow: 0 0 8px rgba(255, 140, 0, 0.25); 
+            outline: none; 
+        }
 
-    .submit-button {
-      width: 100%;
-      padding: 0.9em;
-      border: none;
-      border-radius: 6px;
-      background-color: #06437c;
-      color: white;
-      font-size: 1.1em;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.1s ease;
-      margin-top: 10px;
-    }
+        
+        textarea {
+            resize: vertical; 
+            min-height: 100px;
+        }
 
-    .submit-button:hover {
-      background-color: #0065fd;
-    }
+       
+        .submit-button {
+            width: 100%;
+            padding: 0.9em;
+            border: none;
+            border-radius: 6px;
+            background-color: #06437c; 
+            color: white;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
 
-    .submit-button:active {
-      transform: scale(0.99);
-    }
-
+        .submit-button:hover {
+            background-color: #0065fd; /* Tom mais escuro do azul para o hover */
+        }
+        
+        .submit-button:active {
+            transform: scale(0.99); 
+        }
+                                          /*complemento da primeira parte do meu codigo*/
   </style>
 </head>
 <body>
+ 
+<div class="form-container">
+<form action="index.html" method="post">
+<h2>Já sou Aluno</h2>
+<div class="form-group">
+<label for="nome">Nome Completo:</label>
+<input type="text" id="nome" name="nome" placeholder="Ex: Fulano de tal">
+</div>
 
-  <div class="form-container">
-    <form action="index2.html" method="post">
-      <h2>Já sou Aluno</h2>
+<div class="form-group">
+<label for="data">Data de Nascimento:</label>
+<input type="date" id="data" name="data">
+</div>
 
-      <div class="form-group">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" placeholder="Ex: Fulano de tal">
-      </div>
+<div class="form-group">
+<label for="CPF">Informe seu CPF</label>
+<input type="text" id="CPF" name="CPF" placeholder="000.000.000-01">
+</div>
 
-      <div class="form-group">
-        <label for="data">Data de Nascimento:</label>
-        <input type="date" id="data" name="data">
-      </div>
+<div class="form-group">
+<label for="Genero">Informe seu Genero</label>
+<input type="radio" id="Homem" name="Genero" value="">
+<label for="Homem">Homem</label>
+<input type="radio" id="Mulher" name="Genero" value="">
+<label for="Mulher">Mulher</label>
+</div>
 
-      <div class="form-group">
-        <label for="CPF">Informe seu CPF:</label>
-        <input type="text" id="CPF" name="CPF" placeholder="000.000.000-01">
-      </div>
+<div>
+<label for="Endereço">Informe seu Endereço:</label>
+<input type="text" id="Endereço" name="Endereço" placeholder="Ex: Rua das Trincheiras">
+</div>
 
-      <div class="form-group">
-        <label>Informe seu Gênero:</label>
-        <input type="radio" id="Homem" name="Genero" value="Homem">
-        <label for="Homem">Homem</label>
-        <input type="radio" id="Mulher" name="Genero" value="Mulher">
-        <label for="Mulher">Mulher</label>
-      </div>
+<div>
+<label for="Bairro">Informe seu Bairro:</label>
+<input type="text" id="Bairro" name="Bairro" placeholder="Ex: Socorro">
+<label for="Cidade"> Informe sua Cidade:</label>
+<input type="text" id="Cidade" name="Cidade" placeholder="Ex: Jaboatão">
+<label for="Numero da casa"> Numero da Casa:</label>
+<input type="text" id="Numero da casa" name="Numero da casa" placeholder="Ex: 1234A">
+<label for="CEP">Informe seu CEP:</label>
+<input type="text" id="CEP" name="CEP" placeholder="Ex: 00000-000">
+</div>
 
-      <div class="form-group">
-        <label for="Endereço">Informe seu Endereço:</label>
-        <input type="text" id="Endereço" name="Endereço" placeholder="Ex: Rua das Trincheiras">
-      </div>
+<div>
+<label for="Telefone">Informe seu Telefone:</label>
+<input type="text" id="Telefone" name="Telefone" placeholder="Ex: (00) 00000-0000">
+<label for="E-mail">Informe seu E-mail:</label>
+<input type="text" id="E-mail" name="E-mail" placeholder="Ex: lacaio@gmail.com">
+</div>
 
-      <div class="form-group">
-        <label for="Bairro">Informe seu Bairro:</label>
-        <input type="text" id="Bairro" name="Bairro" placeholder="Ex: Socorro">
 
-        <label for="Cidade">Informe sua Cidade:</label>
-        <input type="text" id="Cidade" name="Cidade" placeholder="Ex: Jaboatão">
+<div class="form-group">
+<button type="reset" class="submit-button">Limpar</button>
+</div>
+</form>
 
-        <label for="Numero">Número da Casa:</label>
-        <input type="text" id="Numero" name="Numero" placeholder="Ex: 1234A">
+<br>
+<form action="index4.html">
+<div class="form-group" style="margin-bottom: 0;">
+<button type="submit" class="submit-button">Enviar Solicitação</button>
+</div>
+</form>
+<br>
 
-        <label for="CEP">Informe seu CEP:</label>
-        <input type="text" id="CEP" name="CEP" placeholder="Ex: 00000-000">
-      </div>
-
-      <div class="form-group">
-        <label for="Telefone">Informe seu Telefone:</label>
-        <input type="text" id="Telefone" name="Telefone" placeholder="Ex: (00) 00000-0000">
-
-        <label for="E-mail">Informe seu E-mail:</label>
-        <input type="email" id="E-mail" name="E-mail" placeholder="Ex: lacaio@gmail.com">
-      </div>
-
-      <!-- Botões dentro do mesmo formulário -->
-      <button type="reset" class="submit-button" style="background-color: #999;">Limpar</button>
-      <button type="submit" class="submit-button" formaction="index2.html" style="background-color: #0065fd;">Enviar Formulário</button>
-
-    </form>
-  </div>
+</div>
 
 </body>
 </html>
